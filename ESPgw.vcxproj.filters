@@ -13,6 +13,8 @@
     <ClInclude Include="__vm\.ESPgw.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HttpServerCB.hxx" />
+    <ClInclude Include="ESPgw.h" />
     <ClInclude Include="EEPROMconfig.hxx" />
   </ItemGroup>
 </Project>

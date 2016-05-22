@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EEPROMconfig.hxx" />
+    <ClInclude Include="ESPgw.h" />
+    <ClInclude Include="HttpServerCB.hxx" />
     <ClInclude Include="__vm\.ESPgw.vsarduino.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
