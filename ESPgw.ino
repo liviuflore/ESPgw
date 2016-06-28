@@ -5,8 +5,8 @@
 #include <FS.h>
 
 #include "ESPgw.h"
-#include "EEPROMconfig.hxx"
-#include "HttpServerCB.hxx"
+#include "EEPROMconfig.h"
+#include "HttpServerCB.h"
 
 #define ErrorEeprom 0
 #define ErrorWifi 1
@@ -29,6 +29,7 @@ void setup_config()
 {
 	if (!EEPROMconfig::load(cfg)) {
 		ERR(ErrorEeprom, "EEPROM config load failed, will load defaults\n");
+		cfg = { 0 };
 	}
 	LOG("EEPROM config setup done\n");
 }
@@ -109,11 +110,16 @@ void setup_http_server()
 	server.on("/wifi_ajax", handle_wifi_ajax);
 
 	server.onNotFound([]() {
-//		if (!handleFileRead(server.uri()))
+		if (!handle_file_read(server.uri()))
 			server.send(404, "text/plain", "FileNotFound");
 	});
 
 	server.begin();
+}
+
+void loop_http_server()
+{
+	server.handleClient();
 }
 
 void setup()
@@ -128,7 +134,7 @@ void setup()
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+	// put your main code here, to run repeatedly:
+	loop_http_server();
 }
 

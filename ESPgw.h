@@ -2,6 +2,7 @@
 #define _ESPGW_H_
 
 #define ESPconfig_version 1
+#define ESPconfig_string_max_size 32
 
 struct ESPgw_config {
 
