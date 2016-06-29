@@ -10,12 +10,6 @@ struct ESPgw_config {
 	char password[32];
 };
 
-enum ESPgw_wifi_mode {
-	ESPgw_wifi_mode_NONE,
-	ESPgw_wifi_mode_AP,
-	ESPgw_wifi_mode_STA
-};
-
 extern ESPgw_config cfg;
 extern ESP8266WebServer server;
 

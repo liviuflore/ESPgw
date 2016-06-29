@@ -14,11 +14,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ESPgw.h" />
-    <ClInclude Include="EEPROMconfig.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HttpServerCB.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="HttpServerCB.h" />
+    <ClInclude Include="EEPROMconfig.h" />
+    <ClInclude Include="cmdParse_generic.h" />
+    <ClInclude Include="rfControl_fn.h" />
   </ItemGroup>
 </Project>
