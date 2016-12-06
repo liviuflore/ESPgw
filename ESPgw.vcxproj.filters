@@ -5,18 +5,44 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ESPgw.ino" />
+    <Filter Include="openmili">
+      <UniqueIdentifier>{c2d3a46e-9269-4c9f-a48d-afd66c087603}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.ESPgw.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ESPgw.h" />
-    <ClInclude Include="HttpServerCB.h" />
     <ClInclude Include="EEPROMconfig.h" />
-    <ClInclude Include="cmdParse_generic.h" />
-    <ClInclude Include="rfControl_fn.h" />
+    <ClInclude Include="Debug.h" />
+    <ClInclude Include="ESPgwWebServer.h" />
+    <ClInclude Include="ESPgwRF433.h" />
+    <ClInclude Include="ESPgwCmdParser.h" />
+    <ClInclude Include="openmili\PL1167_nRF24.h">
+      <Filter>openmili</Filter>
+    </ClInclude>
+    <ClInclude Include="openmili\MiLightRadio.h">
+      <Filter>openmili</Filter>
+    </ClInclude>
+    <ClInclude Include="openmili\AbstractPL1167.h">
+      <Filter>openmili</Filter>
+    </ClInclude>
+    <ClInclude Include="ESPgwOpenmili.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ESPgwWebServer.cpp" />
+    <ClCompile Include="ESPgwRF433.cpp" />
+    <ClCompile Include="ESPgwCmdParser.cpp" />
+    <ClCompile Include="openmili\MiLightRadio.cpp">
+      <Filter>openmili</Filter>
+    </ClCompile>
+    <ClCompile Include="openmili\PL1167_nRF24.cpp">
+      <Filter>openmili</Filter>
+    </ClCompile>
+    <ClCompile Include="ESPgwOpenmili.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ESPgw.ino" />
   </ItemGroup>
 </Project>
